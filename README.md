@@ -1,4 +1,4 @@
-# Bezalel Pin-based Shape Display Simulator (HTML5)
+# Bezalel Simulator (HTML5)
 
 ## Author
 Pedro de Almeida Sacramento
