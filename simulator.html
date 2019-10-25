@@ -1,0 +1,579 @@
+<html>
+<head>
+<meta charset=utf-8 />
+<style>
+body {
+	margin: 0;
+}
+td {
+	width: 32px;
+	height: 32px;
+	border: 0px solid black;
+
+}
+.container {
+  text-align: center;
+}
+.controles {
+  margin-left: 16px;
+}
+.progress {
+  display:inline-block;
+  width:128px;
+}
+</style>
+<script>
+function runSimulation() {
+  var m = $('select[name="mode"]').val();
+  var a = $('select[name="asset"]').val();
+  var id = $('select[name="asset"] option:selected').attr('data-id');
+  var custom = $('select[name="asset"] option:selected').attr('data-custom');  
+
+  // "Custom" mode requires a JSON file with custom data
+  if (m == "custom" && custom == "no") {
+    alert('Unable to find custom file ("assets/"'+id+'.json")');
+    return;
+  }
+
+  // Page is reloaded
+  if (m != "") {
+    load(m,a,$('.rotation3d').val());
+  }
+}
+</script>
+</head>
+<body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/three.min.js"></script>
+<div class="container" style="position:absolute">
+<div class="controles">
+Asset: <select name="asset"></select>
+Strategy: <select name="mode">
+  <option value=""></option>
+  <option value="pin">Pin by pin</option>
+  <option value="line">Line by line</option>
+  <option value="all">All parallel</option>
+  <option value="custom">Custom</option>
+</select>  
+Progress: <span class="progress">0/0</span>  
+<button onclick="runSimulation()">Run Simulation</button>
+Rotation: 
+<input class="rotation3d" type="range" value="0" min="0" max="1" step="0.01" style="width:300px">
+</div>
+<table>
+</table>
+</div>
+<script>
+var asset = '';
+var mode = '';
+var size = '';
+
+var playing = false;
+
+var z_height = 30;
+var SIZE = z_height;
+
+var COUNTER_MAX = 1; // 360
+var SPRITE = 32;
+var THREAD_PITCH = 1;
+var toggle3d = true;
+var rotation3d = 0;
+
+var m_zero = [];
+var m_state_i = [];
+var m_state_j = [];
+
+var counter = 0;
+var sequence_counter = 0;
+
+function offset(mi,mj) {
+  if (mj == 1 && mi == 3)
+    return 1;
+  else
+  if (mj == 1 && mi == 2)
+    return -1;
+  else
+    return 0;
+}
+
+var CAMERA_D = 80;
+
+var w = 2;
+var m_sprites_3D = [];
+        //
+var SIZE = 30;
+
+var camera, scene, renderer, group;
+var mesh;
+var colors = [];
+
+// Sequence
+sequence_counter = 0;
+
+var FPS = 30;
+var request;  
+
+// The pin by pin approach returns the number of voxels
+// of the 2.5D shape
+var Data = function () { }
+ 
+Data.pin = function () {
+    var width = request.width, height = request.height;
+    var sum = 0;
+    var s = 0;
+    for (var y = 0 ; y < height ; y++) {
+      for (var x = 0 ; x < width ; x++) {
+        var avg = pixel(x,y);
+        if (avg > 0) s++;
+        sum += avg;
+      }
+    }
+    return sum;    
+}
+
+// The line by line scans the image line by line
+// and returns the sum of the heighest pins of each line
+Data.line = function () {
+  var avg;
+  var vals = [];
+  var i;
+
+  //
+  for (i = 0 ; i < SIZE ; i++)
+    vals[i] = -1;
+
+  //
+  for (var y = 0 ; y < SIZE ; y++) {
+      for (var x = 0 ; x < SIZE ; x++) {
+          avg = pixel(x,y);          
+          vals[x] = Math.max(vals[x],avg);
+      }
+  }
+
+  //
+  var sum = 0;
+  for (i = 0 ; i < vals.length ; i++)
+    sum += vals[i];
+
+  return sum;
+}
+
+// The all in parallel returns the height of the heighest pin
+Data.all = function () {
+  var avg;
+  var result = 0;
+
+  for (var y = 0 ; y < SIZE ; y++) {
+    for (var x = 0 ; x < SIZE ; x++) {
+      avg = pixel(x,y);
+      result = Math.max(result, avg);
+    }
+  }
+
+  return result; 
+}
+
+function pixelData(x,y) {
+  var px = ctx.getImageData(x,y,1,1);
+  var val = (px.data[0] + px.data[1] + px.data[2])/(3 * 255);    
+  return val;
+}
+
+function pixel(x,y) {
+  var val = Math.round(colors[y][x]*(z_height));
+  return val;
+}
+
+// Line by line rendering algorithm
+function lineByLineAlgorithm(j) {
+  // Returns wether or not the table
+  // needs to be mechanically updated.
+  // Lines without update are just ignored
+  var update = false;
+
+  //
+  for (var mj = 0 ; mj < request.width ; mj++) {
+    m_state_j[mj] = (mj == j)?1:2;
+  }
+
+  //
+  for (var mi = 0 ; mi < request.height ; mi++) {
+    // 
+    if (m_zero[mi][j] != request.data[mi][j])
+      update = true;
+
+    // Upwards
+    if (m_zero[mi][j] < request.data[mi][j])
+      m_state_i[mi] = 3;
+    // Downwards
+    if (m_zero[mi] > request.data[mi][j])
+      m_state_i[mi] = 2;
+    // Still
+    if (m_zero[mi][j] == request.data[mi][j])
+      m_state_i[mi] = 1;
+  }
+
+  return update;
+}
+
+var ctx, cvs;
+// Loads the bitmap
+
+function changePinHeight(i,j,c) {
+  m_sprites_3D[i][j].material.color.set(color[Math.round(c*(z_height-1))]);
+}
+
+function getData(id, f) {
+  var data = {};
+  data.width = SIZE; 
+  data.height = SIZE;
+
+  if (mode == 'custom') {
+    //
+    for (var i = 0 ; i < SIZE ; i++) {
+      m_state_i[i] = 1;
+      m_state_j[i] = 1;
+    }        
+
+    //
+    $.ajax({
+      url:"assets/"+id+".json",
+      dataType: "json"
+    }).done(function (d) {
+      var result = [];    
+      for (var k = 0 ; k < d.data.length ; k++) {
+        var exp = d.data[k].split(' ');
+        var is = exp[0];
+        var js = exp[1];
+
+        var r = {i:[], j:[]};
+        for (var n = 0 ; n < SIZE ; n++) {
+          r.i[n] = parseInt(is.charAt(n));
+          r.j[n] = parseInt(js.charAt(n));
+        }
+        
+        result.push(r);
+      }
+      data.total = result.length;
+      data.data = result;
+      //
+      f(data);
+    })
+  } else {   
+    //
+    data.total = Data[mode]();
+    var res = [];
+
+    //
+    for (var y = 0 ; y < SIZE ; y++) {
+      res[y] = [];
+      for (var x = 0 ; x < SIZE ; x++) {
+        res[y][x] = Math.round(colors[y][x]*z_height);
+      }
+    }
+    
+    data.data = res;
+
+    f(data);
+  }
+}
+
+function load(m, b, r) {
+  //
+  $('select[name="mode"]').val(m);
+  $('select[name="asset"]').val(b);
+
+  //
+  playing = false;
+  //
+  asset = 'assets/'+b+'.png';
+  mode = m;
+  $('.rotation3d').val(r);
+
+  cvs = document.createElement('canvas'),
+  img = new Image();
+  img.onload = function() {
+    ctx = cvs.getContext('2d');
+    ctx.drawImage(img, 0, 0);
+
+    //
+    var idt = ctx.getImageData(0, 0, SIZE, SIZE);
+
+    // 
+    for (var i = 0 ; i < SIZE; i++) {
+      for (var j = 0 ; j < SIZE ; j++) {
+        var px = ctx.getImageData(j,i,1,1);
+        var val = pixelData(j,i);
+        //
+        colors[i][j] = val;
+        m_zero[i][j] = 0;
+        // Update pin material
+        changePinHeight(i,j,val);        
+      }
+    }
+
+    //
+    getData(b, function (data) {
+      //
+      playing = true;
+
+      //
+      sequence_counter_offset = 0;
+      sequence_counter = 0;
+      counter = 0;
+
+      //
+      request = data;
+
+      $('select[name="mode"]').val(mode);
+
+    });
+  }
+
+  img.src = asset;
+}
+
+var color = [];
+
+for (var i = 0 ; i < SIZE ; i++) {
+  color[i] = new THREE.Color( i/SIZE , i/SIZE , i/SIZE );
+}
+
+function init_3D() {
+  scene = new THREE.Scene();
+  scene.background = new THREE.Color( 0xf0f0f0 );
+  group = new THREE.Group();
+
+  var aspect = window.innerWidth / window.innerHeight;
+  camera = new THREE.OrthographicCamera( - CAMERA_D * aspect, CAMERA_D * aspect, CAMERA_D, - CAMERA_D, 0, 2000 );
+  camera.position.set( -SIZE*w*10, SIZE*w*10, SIZE*w*10 );
+  camera.rotation.order = 'YXZ';
+  camera.rotation.y = - Math.PI / 4;
+  camera.rotation.x = Math.atan( - 1 / Math.sqrt( 2 ) );
+
+  var light = new THREE.DirectionalLight( 0xffffff, 1 );
+  light.position.set( 1, 1, 1 ).normalize();
+  scene.add( light );
+
+  var geometry = new THREE.BoxBufferGeometry( w, w, w );
+  
+  //
+  for (var i = 0 ; i < SIZE; i++) {
+    m_sprites_3D[i] = [];
+    for (var j = 0 ; j < SIZE; j++) {
+      var material = new THREE.MeshLambertMaterial();
+      material.color.set(color[0]);
+      m_sprites_3D[i][j] = new THREE.Mesh( geometry, material );
+      var si = (i-SIZE/2) * w*1.1;
+      var sj = (j-SIZE/2) * w*1.1;
+      m_sprites_3D[i][j].position.set(sj,0,si)
+      group.add(m_sprites_3D[i][j]);
+    }
+  }
+
+  scene.add(group);
+
+  //scene.add( mesh );
+  renderer = new THREE.WebGLRenderer( { antialias: true } );
+  renderer.setPixelRatio( window.devicePixelRatio );
+  renderer.setSize( window.innerWidth, window.innerHeight );
+  document.body.appendChild( renderer.domElement );
+
+  //
+  window.addEventListener( 'resize', onWindowResize, false );
+}
+
+function onWindowResize() {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize( window.innerWidth, window.innerHeight );
+}
+
+function next_sequence() {
+  //
+  if (request.data.length) {
+    // Loads current sequence
+    sequence = request.data[sequence_counter];
+    // 
+    m_state_i = sequence.i;
+    m_state_j = sequence.j;
+  }
+}
+
+//
+function maximumVolume() { return request.width*request.height*z_height; }
+
+// Pin by pin scanning position
+var sequence_counter_offset = 0;
+
+function iterate() {
+  var sequence;
+
+  $('.progress').text((sequence_counter+1)+' / '+(request.total));
+
+  switch (mode ) {
+    // In the custom approach, states are manually provided by the user
+    // using a json file inside the assets foldder
+    case "custom":
+      next_sequence();
+
+      //
+      for (var i = 0 ; i < request.height; i++) {
+        for (var j = 0 ; j < request.width; j++) {
+          m_zero[i][j] += offset(m_state_i[i],m_state_j[j]);
+        }
+      }
+
+      sequence_counter++;
+    break;
+    // In the "line by line" approach, the "line by line" algorithm
+    // changes the states of motors so that the desired shape is rendered
+    case "line":
+      //
+      while (!lineByLineAlgorithm((sequence_counter+sequence_counter_offset)%request.width)) {
+        sequence_counter_offset++;
+      }
+
+      //
+      for (var i = 0 ; i < request.height; i++) {
+        for (var j = 0 ; j < request.width; j++) {
+          m_zero[i][j] += offset(m_state_i[i],m_state_j[j]);
+        }
+      }
+
+      sequence_counter++;
+    break;
+    // The "all in parallel" approach updates all the pins simultaneously
+    case "all":
+      for (var i = 0 ; i < request.height; i++) {
+        for (var j = 0 ; j < request.width; j++) {
+          if (m_zero[i][j] < request.data[i][j]) {
+            m_zero[i][j] ++;
+          }
+        }
+      }
+
+      sequence_counter++;
+    break;
+    // The "pin by pin" approach updates pins one by one
+    case "pin":
+      var changed = false;
+      var i,j;
+
+      while (!changed && sequence_counter_offset < maximumVolume()) {
+        j = sequence_counter_offset%request.width;
+        i = Math.floor(sequence_counter_offset/request.width)%request.height;
+
+        if (m_zero[i][j] < request.data[i][j]) {
+          m_zero[i][j] ++;
+          changed = true;
+        } else
+          changed = false;
+
+        sequence_counter_offset++;          
+      }
+      
+      sequence_counter++;
+    break;
+  }
+}
+
+function animate() {
+
+  // https://stackoverflow.com/questions/11285065/limiting-framerate-in-three-js-to-increase-performance-requestanimationframe
+  setTimeout(function () {
+    // Camera rotation
+    rotation3d += (parseFloat($('.rotation3d').val()) - rotation3d) * 0.05;
+    group.rotation.set(
+      0,
+      rotation3d * (2*Math.PI),
+      0
+    );
+
+    //
+    if (playing) {
+
+      if (counter == 0 && sequence_counter < request.total) iterate();
+
+      var t = counter/COUNTER_MAX;
+      var delta;
+
+      // 3D
+      for (var i = 0 ; i < SIZE; i++) {
+        for (var j = 0 ; j < SIZE; j++) {
+          m_sprites_3D[i][j].scale.set(1, THREAD_PITCH * ((1+m_zero[i][j])), 1);
+          m_sprites_3D[i][j].position.set(
+            m_sprites_3D[i][j].position.x,
+            m_sprites_3D[i][j].scale.y,
+            m_sprites_3D[i][j].position.z
+          );
+        }
+      }
+
+      counter = (counter+5)%COUNTER_MAX;
+    }
+
+    requestAnimationFrame( animate );
+  }, 1000 / FPS);
+
+  renderer.render( scene, camera );
+}
+
+$(function () {
+    $('select[name="mode"]').val("");
+
+    $.ajax({url:"data.json"}).done(function (data) {
+        for (var i = 0 ; i < data.length ; i++) {
+            var id = data[i].id;
+            var o = $('<option />')
+              .attr('data-id', id)
+              .attr('data-custom', data[i].custom)
+              .val(id)
+              .text(id);
+            
+            $('select[name="asset"]').append(o);
+        }
+
+        //
+        init_3D();
+
+        //
+        for (var i = 0 ; i < SIZE; i++) {
+          colors[i] = [];
+          m_zero[i] = [];
+          for (var j = 0 ; j < SIZE ; j++) {
+            colors[i][j] = 0;
+            m_zero[i][j] = 0;
+          }
+        }
+
+        //
+        loadHash(data);
+
+        //
+        animate();
+      
+    })
+});
+
+function loadHash(data) {
+  var m, b, r;
+
+  //
+  if (location.hash.indexOf('#') != -1) {
+    var hash = location.hash.split('#')[1].split('/');
+    m = hash[0];
+    b = hash[1];
+    r = parseFloat(hash[2]);
+  } else {
+    m = 'all';
+    b = data[0].id;
+    r = 0;
+  }
+
+  //
+  load(m, b, r);  
+}
+</script>
+</body>
+</html>
