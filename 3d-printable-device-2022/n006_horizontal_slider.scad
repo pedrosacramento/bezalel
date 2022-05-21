@@ -4,7 +4,7 @@ module n006_horizontal_slider() {
             n006_horizontal_slider_item(i);
         }
         
-        rotate([0,0,90]) for (j=[0:1:7]) {
+        translate([0,0,6]) rotate([0,0,90]) for (j=[0:1:7]) {
             n006_horizontal_slider_item(8+j);
         }    
     }
