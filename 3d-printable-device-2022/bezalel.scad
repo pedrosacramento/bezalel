@@ -5,7 +5,7 @@ include<n001_bushings.scad>
 include<n002_crank.scad>
 include<n003_servo_board.scad>
 include<n004_linear_guide.scad>
-include<n005_vertical_block.scad>
+include<n005_vertical_pin.scad>
 include<n006_horizontal_slider.scad>
 include<n007_servo_arm.scad>
 include<n008_spacer.scad>
@@ -32,7 +32,7 @@ module sample_pyramid() {
         n004_linear_guide();
     
     color(COLOR_YELLOW)
-        n005_vertical_block();
+        n005_vertical_pin();
     
     color(COLOR_ORANGE)
         n006_horizontal_slider();
