@@ -1,7 +1,7 @@
 // Colors
 include<colors.scad>
 include<n000_square_grid.scad>
-include<n001_bushings.scad>
+include<n001_main_plane.scad>
 include<n002_crank.scad>
 include<n003_servo_board.scad>
 include<n004_linear_guide.scad>
@@ -20,7 +20,7 @@ module sample_pyramid() {
         n000_square_grid();
 
     color(COLOR_ORANGE)
-        n001_bushings();
+        n001_main_plane();
 
     color(COLOR_YELLOW)
         n002_crank();
