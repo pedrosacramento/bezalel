@@ -2,7 +2,7 @@
 
 Tactile interaction is considered the next frontier for human-computer interaction.
 A generic approach to provide such an interaction is the creation of a matrix of vertical pins that move up and down so that tactile shapes can be rendered.
-Unfortunatelly, the manufacturing costs for building such matrices is typically hight, basically because each tactile "pixel" needs an actuator, and the number of actuators grow quadratically with the resolution of the device.
+Unfortunatelly, the manufacturing costs for building such matrices is typically very high, basically because each tactile "pixel" needs an actuator, and the number of actuators grow quadratically with the resolution of the device.
 The goal of this project is to contribute to the creation of a generation of tactile displays that can be manufactured at home with a low-cost.
 We provide a novel mechanical design and an algorithm with which tactile devices can be manufactured at home with 3D printed parts and a small amount of actuators.
 
