@@ -6,6 +6,8 @@ Unfortunatelly, the manufacturing costs for building such matrices is typically 
 The goal of this project is to contribute to the creation of a generation of tactile displays that can be manufactured at home with a low-cost.
 We provide a novel mechanical design and an algorithm with which tactile devices can be manufactured at home with 3D printed parts and a small amount of actuators.
 
+![Animated 3x3 model](animated-3x3-model.gif)
+
 ## Roadmap
 - [x] Share the tactile interface 3D printable mechanical design
 - [ ] Share the tactile interface firmware
