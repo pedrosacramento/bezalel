@@ -10,23 +10,24 @@ Unfortunatelly, the manufacturing costs behind such matrices is typically very h
 I currently have a functional 3x3 device that implements the proposed technology, as seen in this [youtube video](https://www.youtube.com/watch?v=CwHi78mkTRg). I'm rewriting the Arduino firmware before publishing that in this repository, but a didact version of the algorithm used to control the actuators is available in the directory where lives the 3x3 matrix openscad files. The openscad model has been created with the goal of clearly conveying all the concepts behind the mechanical model and the algorithm, but please feel free to reach me out if you need any further clarification.
 
 ## Roadmap
-- [x] Share the tactile interface 3D printable mechanical design
-- [ ] Share the tactile interface firmware
+- [x] Share the 3D printable mechanical design of a 3x3 matrix
+- [ ] Share the Arduino firmware
+- [ ] Share the 3D printable mechanical design of an 8x8 matrix
 - [ ] Share an application that can be used to teach computer programaming to kids using the tactile interface
 
 ## Motivation
 I started working with computers when I was very young, and kids typically have interesting dreams.
 One of my childhood dreams was to create a technology that would allow people to interact with computers without using their eyes.
-I have three eyesighted kids, and when the second one was still in the womb, my wife was misdiagnosed with an infection that could make my daughter to be born blind.
-During one week (the time necessary for us to figure out that it was a misdiagnosis) I've been thinking about what kind of technology we would need for our daughter to have autonomy in many daily activities.
-This experience led me to stop waiting for an opportunity, and immediatly focus on trying to create the technology I've been always dreaming about.
+This is something that I had never focused on. But during her second pregnancy my wife was misdiagnosed with an infection that could make our daughter to be born blind.
+It took one week for us to figure out that it was a misdiagnosis, but this experience led me to decide to get back to this idea again.
 This repository contains the results of my efforts towards the goal of making a low-cost tactile interface that can be used regardless we are eyesighted or not.
 There's a long road ahead, but I hope to leave a legacy towards this goal by sharing what I've got so far.
 
 ### Fun fact
-The name of the project is Bezalel because the Bible describes an artisan called Bezalel who received craftsman skills from God.
-The development of the proposed technology involved trial and error, and an insane amount of manual work.
-During this process I've been constantly asking God to give me the craftsman skills necessary to accomplish my goal.
+The development of the prototype I'm sharing involved an insane amount of manual work, trial and error.
+During this process I've been constantly asking God to give me the skills necessary to accomplish my goal (like assembling, maitaining and using a 3D printer, designing mechanical parts, etc).
+I honestly believe that he answered my request for assistance, and this is the reason why I decided to give the project the name Bezalel.
+Bezalel is, according to the Bible, the name of a man who received craftsman skills from God.
 
 ## Legal notice
 ### Licence
