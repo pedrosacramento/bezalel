@@ -14,7 +14,7 @@ I currently have a functional 3x3 device that implements the proposed technology
 
 The ultimate aim of this project is to develop tactile matrices that can be used to convey not only braille characters, but also tactile graphics. Ideally, the spacing between the braille dots would be close to 2.5mm, the typical size used in similar technologies. However, building grids as small as 2.5mm is a very ambitious goal.
 
-Fortunately, there are many exciting applications for matrices with grids that are larger than 2.5mm. For example, companies such as Lego® have already released braille blocks that can be used to educate blind children. We envision that our technology could be used to create digital tables for educational purposes, while we continue to work towards smaller grids.
+Fortunately, there are many exciting applications for matrices with grids that are larger than 2.5mm. For example, companies such as Lego® have already released braille blocks that can be used to educate blind children. We envision that our technology could be used to create digital tables where the dots are similarly big, for educational purposes, while we continue to work towards smaller grids.
 
 We are confident that advancements in 3D printing technologies will make it increasingly feasible to achieve our goal over the next decade. In the meantime, we will keep publishing grids that increase the number of dots and decrease the size of the dots, as people adapt our designs for various applications. 
 
