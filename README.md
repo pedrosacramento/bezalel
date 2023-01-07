@@ -22,7 +22,7 @@ We are confident that advancements in 3D printing technologies will make it incr
 - [x] Publish the proof of concept 3D printable mechanical design of a 3x3 matrix
 
 ## 2023
-- [ ] Publish the mechanical model and firmware of a 8x8 matrix
+- [ ] Publish the mechanical model and firmware of an 8x8 matrix
 
 ## 2024
 - [ ] Publish the mechanical model and firmware of a 16x16 matrix
