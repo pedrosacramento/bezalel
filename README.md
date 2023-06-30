@@ -1,6 +1,6 @@
 # Bezalel - An open-source 3D printable low-cost tactile display
 
-Tactile interaction is considered the next frontier for human-computer interaction. A generic way to promote such interaction is by using a matrix of vertical pins that can render tactile shapes. Good examples of such matrices can be seen in the products developed by companies such as [metec Ag](https://www.metec-ag.de/produkte-graphik-display.php?p=t2d) and [Orbit Research](http://www.orbitresearch.com/product/graphiti/). An interesting discussion about the relevance of such devices can be found in the description of the [European Union Tactile Display Horizon Prize](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/prizes/horizon-prizes/tactile-display_en). 
+Tactile interaction is considered the next frontier for human-computer interaction. A generic way to promote such interaction is by using a matrix of vertical pins that can render tactile shapes. Good examples of such matrices can be seen in assistive technologies to the blind population. An interesting discussion about the relevance of such devices can be found in the description of the [European Union Tactile Display Horizon Prize](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/prizes/horizon-prizes/tactile-display_en). 
 
 Unfortunately, the manufacturing costs behind such matrices are typically very high because - among other reasons - each tactile "pixel" tends to require one actuator, and the number of actuators tends to grow quadratically with the resolution of the device. Also it is hard for traditional manufacturing processes to lower the cost of such devices on small scale. The goal of this project is to contribute to the creation of a generation of tactile displays that rely on 3D printing technologies so that they can be manufactured at home at a low cost. We provide a novel mechanical design and an algorithm with which people can create tactile devices that use a small number of actuators and that can be manufactured with 3D printed parts.
 
@@ -12,7 +12,7 @@ I currently have a functional 3x3 device that implements the proposed technology
 ## Roadmap
 The ultimate aim of this project is to develop tactile matrices that can be used to convey not only braille characters, but also tactile graphics. Ideally, the spacing between the braille dots would be close to 2.5mm, the typical size used in similar technologies. However, building grids as small as 2.5mm is a very ambitious goal.
 
-Fortunately, there are many exciting applications for matrices with grids that are larger than 2.5mm. For example, companies such as Lego® have already released braille blocks that can be used to educate blind children. We envision that our technology could be used to create digital tables where the dots are similarly big, for educational purposes, while we continue to work towards smaller grids.
+Fortunately, there are many exciting applications for matrices with grids that are larger than 2.5mm. For example, some companies have already released braille blocks that can be used to educate blind children. We envision that our technology could be used to create digital tables where the dots are similarly big, for educational purposes, while we continue to work towards smaller grids.
 
 We are confident that advancements in 3D printing technologies will make it increasingly feasible to achieve our goal over the next decade. In the meantime, we will keep publishing grids that increase the number of dots and decrease the size of the dots, as people adapt our designs for various applications. 
 
@@ -41,9 +41,6 @@ The development of the prototype that I am sharing involved a lot of manual work
 ### Patent
 A patent was filed in 2019 following the defensive publication approach. Both the patent and the detailed publication of the Bezalel solution have the basic goal of sharing the project while also preventing the progress of this invention from being hindered by someone with legal rights over the invention.
 We are following the defensive patent approach used by the RepRap project: https://reprap.org/wiki/RepRapGPLLicence
-
-### Trademarks
-LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site
 
 ## How to contribute
 
