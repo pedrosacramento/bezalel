@@ -1,4 +1,0 @@
-COLOR_ORANGE = [1.0,0.5,0.0];
-COLOR_YELLOW = [1.0,1.0,0.0];
-COLOR_GREEN  = [0.0,1.0,0.0];
-COLOR_GRAY   = [0.3,0.3,0.3];
