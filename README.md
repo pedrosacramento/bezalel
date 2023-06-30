@@ -22,10 +22,10 @@ We are confident that advancements in 3D printing technologies will make it incr
 - [x] Publish the proof of concept 3D printable mechanical design of a 3x3 matrix
 
 ## 2023
-- [ ] Publish the mechanical model and firmware of an 8x8 matrix
+- [x] Publish a new 3D printable design for the 3x3 matrix
 
 ## 2024
-- [ ] Publish the mechanical model and firmware of a 16x16 matrix
+- [ ] Publish the mechanical model and firmware of a bigger matrix (maybe 16x16)
 - [ ] Publish suggestions about potential usage of the Bezalel technology to teach programming to blind kids
 
 ## Motivation
@@ -36,7 +36,7 @@ The development of the prototype that I am sharing involved a lot of manual work
 
 ## Legal notice
 ### Licence
-- The mechanical design (3d-printable-device-2022) is free; you can redistribute it and/or modify it under the terms of the GNU General Public Licence version 3 as published by the Free Software Foundation.
+- The mechanical designs (inside the directories create-the-future-design-contest-2023 and 3d-printable-device-2022) are free; you can redistribute it and/or modify it under the terms of the GNU General Public Licence version 3 as published by the Free Software Foundation.
 - The simulator (siggraph-asia-2019) is also free, and you can distribute it and/or modify it under the terms of the GNU Affero General Public License v3.0 as published by the Free Software Foundation.
 
 ### Patent
