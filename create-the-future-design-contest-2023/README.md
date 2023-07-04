@@ -2,7 +2,6 @@
 
 This folder contains the OpenSCAD and STL files necessary to build a 3x3 matrix of vertical pins.
 The STL files corresponds to the mechanical design of a 3x3 matrix, which demands only 6 servos.
-The electronic parts have been designed to support up to 32 servos.
 
 ## Version
 2023.06
@@ -20,3 +19,7 @@ The electronic parts have been designed to support up to 32 servos.
 | 100 x M3 locknuts | 6.99  | 0.09 | 0.63 | [Link](https://www.amazon.com/100Pcs-Stainless-Self-Lock-Inserted-Clinching/dp/B075ZZW7VL/ref=sr_1_1?crid=134FDOY6J9LXK&keywords=m3+locknut&qid=1687528464&sprefix=m3+locknu%2Caps%2C223&sr=8-1) |
 | 15 x M3 shaft collar | 7.99  | 0.6 | 4.79 | [Link](https://www.amazon.com/Hobbypark-Landing-Stopper-Airplane-Replacement/dp/B01EA912P8/ref=sr_1_4?crid=F3GVBCP8UDND&keywords=m3+shaft+collar&qid=1687529023&sprefix=m3+shaft+collar%2Caps%2C243&sr=8-4) |
 | 4 x 3mm Flange Coupling Connector | 8.99  | 2.25 | 20.23 | [Link](https://www.amazon.com/Coupling-Connector-Coupler-Accessory-Fittings/dp/B083352VJH/ref=sr_1_3?crid=XSYHWYPV1CKU&keywords=3mm+flange+coupling&qid=1687529184&sprefix=3m+flange+coupling%2Caps%2C228&sr=8-3) |
+
+## Circuit
+We've been making tests with the circuit available [here](board.pdf).
+It has been designed to support up to 32 servos because we're planning to build matrices with more pins.
