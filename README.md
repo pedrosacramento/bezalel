@@ -9,7 +9,7 @@ Unfortunately, the manufacturing costs behind such matrices are typically very h
 ## 3D printable 3x3 matrix
 
 ### Version 2023.06 (create-the-future-design-contest-2023)
-On June, 2023, we published the OpenSCAD files of the redesigned the 3x3 matrix with the goal of making it easier to assemble and also to reduce costs. The new design removes all the POM wheels, bearings, aluminium coupling and many other parts that were adding to the costs in the previews design. The costs of this new matrix are below US$ 200.
+On June, 2023, we published the OpenSCAD files of the redesigned the 3x3 matrix with the goal of making it easier to assemble and also to reduce costs. The new design removes all the POM wheels, bearings, aluminium coupling and many other parts that were adding to the costs in the previews design. The costs of this new matrix are below US$ 200. The new design has been shared as part of our submission to the [Create The Future Design Contest 2023](https://contest.techbriefs.com/2023/entries/electronics/12394).
 
 ### Version 2022.12 (3d-printable-device-2022)
 On december, 2022, we published the OpenSCAD files of a 3x3 matrix that implements our approach. The design corresponds to the device partially shown in this [youtube video](https://www.youtube.com/watch?v=CwHi78mkTRg).
