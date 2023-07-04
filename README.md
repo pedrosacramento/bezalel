@@ -6,8 +6,16 @@ Unfortunately, the manufacturing costs behind such matrices are typically very h
 
 ![Animated 3x3 model](animated-model.gif)
 
-## 3x3 matrix
-I currently have a functional 3x3 device that implements the proposed technology, as seen in this [youtube video](https://www.youtube.com/watch?v=CwHi78mkTRg). I am rewriting the Arduino firmware before publishing it in this repository, but a didactic version of the algorithm used to control the actuators is available in the directory where the 3x3 matrix OpenSCAD files are located. The OpenSCAD model has been created with the goal of clearly conveying all the concepts behind the mechanical model and the algorithm, but please feel free to contact me if you need any further clarification.
+## 3D printable 3x3 matrix
+
+### Version 2023.06 (create-the-future-design-contest-2023)
+On June, 2023, we published the OpenSCAD files of the redesigned the 3x3 matrix with the goal of making it easier to assemble and also to reduce costs. The new design removes all the POM wheels, bearings, aluminium coupling and many other parts that were adding to the costs in the previews design. The costs of this new matrix are below US$ 200.
+
+### Version 2022.12 (3d-printable-device-2022)
+On december, 2022, we published the OpenSCAD files of a 3x3 matrix that implements our approach. The design corresponds to the device partially shown in this [youtube video](https://www.youtube.com/watch?v=CwHi78mkTRg).
+
+## Firmware
+We are rewriting the Arduino firmware before publishing it in this repository, but a didactic version of the algorithm used to control the actuators is available in the directory where the 3x3 matrix OpenSCAD files are located. The OpenSCAD model has been created with the goal of clearly conveying all the concepts behind the mechanical model and the algorithm, but please feel free to contact me if you need any further clarification.
 
 ## Roadmap
 The ultimate aim of this project is to develop tactile matrices that can be used to convey not only braille characters, but also tactile graphics. Ideally, the spacing between the braille dots would be close to 2.5mm, the typical size used in similar technologies. However, building grids as small as 2.5mm is a very ambitious goal.
