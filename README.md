@@ -47,7 +47,7 @@ The development of the prototype that I am sharing involved a lot of manual work
 - The simulator (siggraph-asia-2019) is also free, and you can distribute it and/or modify it under the terms of the GNU Affero General Public License v3.0 as published by the Free Software Foundation.
 
 ### Patent
-A patent was filed in 2019 following the defensive publication approach. Both the patent and the detailed publication of the Bezalel solution have the basic goal of sharing the project while also preventing the progress of this invention from being hindered by someone with legal rights over the invention.
+A patent was filed in 2019 following the defensive publication approach.
 We are following the defensive patent approach used by the RepRap project: https://reprap.org/wiki/RepRapGPLLicence
 
 ## How to contribute
