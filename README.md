@@ -2,8 +2,8 @@
 
 ## Features
 * **Low-cost** - Build tactile displays using only one actuator for each row and one for each column
-* **Efficient refresh** - We have an algorithm with which the matrix is updated line by line in the worst case scenario, but all the pins are simulataneously updated in the best case scenario
-* **3D printable and open-source** - We're sharing everything you need to replicate and to improve the technology
+* **Efficient refresh** - Update matrices with a line by line process in the worst case scenario and update all the pins simulataneously in the best case scenario
+* **3D printable and open-source** - 3D print and improve the technology according to your needs
 
 ## Why low-cost tactile displays?
 Tactile interaction is considered the next frontier for human-computer interaction. A generic way to promote such interaction is by using a matrix of vertical pins that can render tactile shapes. Good examples of such matrices can be seen in assistive technologies to the blind population. An interesting discussion about the relevance of such devices can be found in the description of the [European Union Tactile Display Horizon Prize](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/prizes/horizon-prizes/tactile-display_en). 
