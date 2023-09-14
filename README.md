@@ -15,6 +15,9 @@ Unfortunately, the manufacturing costs behind such matrices are typically very h
 ## 3D printable device
 We've designed a 3x3 matrix that implements our novel approach. In this repository we share the 3D printable mechanical design and the algorithm used to refresh the matrix.
 
+### Version 2023.09 (3d-printable-device-september-2023) (in progress)
+We are currently publishing the OpenSCAD files with some minor adjustments and some directory structure cleanup. This is the beggining of a major cleanup to this github directory.
+
 ### Version 2023.06 (create-the-future-design-contest-2023)
 On June, 2023, we published the OpenSCAD files of the redesigned the 3x3 matrix with the goal of making it easier to assemble and also to reduce costs. The new design removes all the POM wheels, bearings, aluminium coupling and many other parts that were adding to the costs in the previews design. The costs of this new matrix are below US$ 200. The new design has been shared as part of our submission to the [Create The Future Design Contest 2023](https://contest.techbriefs.com/2023/entries/electronics/12394). The repository is constantly changing to keep track of the improvements we're making to the technology. With [this link](https://www.youtube.com/watch?v=p8M2p39o1eg) you can see a device that implements our approach as of September 2023. 
 
@@ -31,16 +34,16 @@ Fortunately, there are many exciting applications for matrices with grids that a
 
 We are confident that advancements in 3D printing technologies will make it increasingly feasible to achieve our goal over the next decade. In the meantime, we will keep publishing grids that increase the number of dots and decrease the size of the dots, as people adapt our designs for various applications. 
 
-### 2022
-- [x] Publish the proof of concept 3D printable mechanical design of a 3x3 matrix
+### 2024
+- [ ] Publish the mechanical model and firmware of a bigger matrix (maybe 16x16)
+- [ ] Publish suggestions about potential usage of the Bezalel technology to teach programming to blind kids
 
 ### 2023
 - [x] Publish a new 3D printable STL files for the 3x3 matrix (create-the-future-design-contest-2023)
 - [ ] Publish instructions about how to assemble the new 3D printable design
 
-### 2024
-- [ ] Publish the mechanical model and firmware of a bigger matrix (maybe 16x16)
-- [ ] Publish suggestions about potential usage of the Bezalel technology to teach programming to blind kids
+### 2022
+- [x] Publish the proof of concept 3D printable mechanical design of a 3x3 matrix
 
 ## Motivation
 I started working with computers at a very young age, and children often have interesting dreams. One of my childhood dreams was to create a technology that would allow people to interact with computers without using their eyes. This is something that I had never focused on, but during her second pregnancy, my wife was misdiagnosed with an infection that could cause our daughter to be born blind. It took one week for us to realize it was a misdiagnosis, but this experience led me to decide to revisit this idea. This repository contains the results of my efforts towards the goal of creating a low-cost tactile interface that can be used regardless of whether we have sight or not. There is a long road ahead, but I hope to leave a legacy towards this goal by sharing what I have achieved so far.
