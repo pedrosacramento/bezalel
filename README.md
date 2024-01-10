@@ -15,16 +15,24 @@ Unfortunately, the manufacturing costs behind such matrices are typically very h
 ## 3D printable device
 We've designed a 3x3 matrix that implements our novel approach. In this repository we share the 3D printable mechanical design and the algorithm used to refresh the matrix.
 
-### Version 2024.01 (3d-printable-device-2024)
-First g-code compatible version of Bezalel
+### Version 2024.01
+📁 **3d-printable-device-2024**
 
-### Version 2023.09 (3d-printable-device-september-2023)
+First g-code compatible version of Bezalel. With this version the 6 servos have been replaced by 2 stepper motors. The goal of this change is to make the device compatible to firmwares such as grbl and marlin.
+
+### Version 2023.09
+📁 **3d-printable-device-september-2023**
+
 We are currently publishing the OpenSCAD files with some minor adjustments and some directory structure cleanup. This is the beggining of a major cleanup to this github directory.
 
-### Version 2023.06 (create-the-future-design-contest-2023)
+### Version 2023.06
+📁 **create-the-future-design-contest-2023**
+
 On June, 2023, we published the OpenSCAD files of the redesigned the 3x3 matrix with the goal of making it easier to assemble and also to reduce costs. The new design removes all the POM wheels, bearings, aluminium coupling and many other parts that were adding to the costs in the previews design. The costs of this new matrix are below US$ 200. The new design has been shared as part of our submission to the [Create The Future Design Contest 2023](https://contest.techbriefs.com/2023/entries/electronics/12394). The repository is constantly changing to keep track of the improvements we're making to the technology. With [this link](https://www.youtube.com/watch?v=p8M2p39o1eg) you can see a device that implements our approach as of September 2023. 
 
-### Version 2022.12 (3d-printable-device-2022)
+### Version 2022.12
+📁 **3d-printable-device-2022**
+
 On december, 2022, we published the OpenSCAD files of a 3x3 matrix that implements our approach. The design corresponds to the device partially shown in this [youtube video](https://www.youtube.com/watch?v=CwHi78mkTRg).
 
 ## Firmware
