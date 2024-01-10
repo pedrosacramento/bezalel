@@ -15,7 +15,10 @@ Unfortunately, the manufacturing costs behind such matrices are typically very h
 ## 3D printable device
 We've designed a 3x3 matrix that implements our novel approach. In this repository we share the 3D printable mechanical design and the algorithm used to refresh the matrix.
 
-### Version 2023.09 (3d-printable-device-september-2023) (in progress)
+### Version 2024.01 (3d-printable-device-2024)
+First g-code compatible version of Bezalel
+
+### Version 2023.09 (3d-printable-device-september-2023)
 We are currently publishing the OpenSCAD files with some minor adjustments and some directory structure cleanup. This is the beggining of a major cleanup to this github directory.
 
 ### Version 2023.06 (create-the-future-design-contest-2023)
@@ -35,12 +38,11 @@ Fortunately, there are many exciting applications for matrices with grids that a
 We are confident that advancements in 3D printing technologies will make it increasingly feasible to achieve our goal over the next decade. In the meantime, we will keep publishing grids that increase the number of dots and decrease the size of the dots, as people adapt our designs for various applications. 
 
 ### 2024
-- [ ] Publish the mechanical model and firmware of a bigger matrix (maybe 16x16)
+- [ ] Publish the mechanical model and firmware of a 6x6 matrix
 - [ ] Publish suggestions about potential usage of the Bezalel technology to teach programming to blind kids
 
 ### 2023
 - [x] Publish a new 3D printable STL files for the 3x3 matrix (create-the-future-design-contest-2023)
-- [ ] Publish instructions about how to assemble the new 3D printable design
 
 ### 2022
 - [x] Publish the proof of concept 3D printable mechanical design of a 3x3 matrix
