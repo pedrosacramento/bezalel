@@ -1,4 +1,4 @@
-# Bezalel 2024.01
+# Bezalel
 
 This folder contains the [mechanical model](https://www.youtube.com/shorts/VI4thVvgoXY) of the Bezael device that has been designed for being actuated using stepper motors.
 
