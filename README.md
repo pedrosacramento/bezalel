@@ -1,8 +1,8 @@
 # Bezalel - An open-source 3D printable low-cost tactile display
 
 ## Features
-* **Low-cost** - Build tactile displays using only one actuator for each row and one for each column
-* **Efficient refresh** - Update matrices with a line by line process in the worst case scenario and update all the pins simulataneously in the best case scenario
+* **Low-cost** - Build DIY tactile displays using a small amount of actuators
+* **Efficient refresh** - Refresh multiple pins simultaneously
 * **3D printable and open-source** - 3D print and improve the technology according to your needs
 
 ## Why low-cost tactile displays?
@@ -15,28 +15,8 @@ Unfortunately, the manufacturing costs behind such matrices are typically very h
 ## 3D printable device
 We've designed a 3x3 matrix that implements our novel approach. In this repository we share the 3D printable mechanical design and the algorithm used to refresh the matrix.
 
-### Version 2024.01
-📁 **3d-printable-device-2024**
-
-First g-code compatible version of Bezalel. With this version the 6 servos have been replaced by 2 stepper motors. The goal of this change is to make the device compatible to firmwares such as grbl and marlin.
-
-### Version 2023.09
-📁 **3d-printable-device-september-2023**
-
-We are currently publishing the OpenSCAD files with some minor adjustments and some directory structure cleanup. This is the beggining of a major cleanup to this github directory.
-
-### Version 2023.06
-📁 **create-the-future-design-contest-2023**
-
-On June, 2023, we published the OpenSCAD files of the redesigned the 3x3 matrix with the goal of making it easier to assemble and also to reduce costs. The new design removes all the POM wheels, bearings, aluminium coupling and many other parts that were adding to the costs in the previews design. The costs of this new matrix are below US$ 200. The new design has been shared as part of our submission to the [Create The Future Design Contest 2023](https://contest.techbriefs.com/2023/entries/electronics/12394). The repository is constantly changing to keep track of the improvements we're making to the technology. With [this link](https://www.youtube.com/watch?v=p8M2p39o1eg) you can see a device that implements our approach as of September 2023. 
-
-### Version 2022.12
-📁 **3d-printable-device-2022**
-
-On december, 2022, we published the OpenSCAD files of a 3x3 matrix that implements our approach. The design corresponds to the device partially shown in this [youtube video](https://www.youtube.com/watch?v=CwHi78mkTRg).
-
 ## Firmware
-We are rewriting the Arduino firmware before publishing it in this repository, but a didactic version of the algorithm used to control the actuators is available in the directory where the 3x3 matrix OpenSCAD files are located. The OpenSCAD model has been created with the goal of clearly conveying all the concepts behind the mechanical model and the algorithm, but please feel free to contact me if you need any further clarification.
+The [current iteration of the mechanical model](https://www.youtube.com/shorts/GXPK05_UD4o) is controlled with GRBL 1.1h.
 
 ## Roadmap
 The ultimate aim of this project is to develop tactile matrices that can be used to convey not only braille characters, but also tactile graphics. Ideally, the spacing between the braille dots would be close to 2.5mm, the typical size used in similar technologies. However, building grids as small as 2.5mm is a very ambitious goal.
@@ -46,14 +26,16 @@ Fortunately, there are many exciting applications for matrices with grids that a
 We are confident that advancements in 3D printing technologies will make it increasingly feasible to achieve our goal over the next decade. In the meantime, we will keep publishing grids that increase the number of dots and decrease the size of the dots, as people adapt our designs for various applications. 
 
 ### 2024
-- [ ] Publish the mechanical model and firmware of a 6x6 matrix
+- [x] Redesigned the actuation mechanism so that it works with stepper motors and the device is G-code compatible
+- [ ] Publish a G-code generator
+- [ ] Increase the device resolution to 6x6
 - [ ] Publish suggestions about potential usage of the Bezalel technology to teach programming to blind kids
 
 ### 2023
-- [x] Publish a new 3D printable STL files for the 3x3 matrix (create-the-future-design-contest-2023)
+- [x] Featured among top 100 Create The Future Design Contest 2023 submissions
 
 ### 2022
-- [x] Publish the proof of concept 3D printable mechanical design of a 3x3 matrix
+- [x] Published the proof of concept 3D printable mechanical design of a 3x3 matrix
 
 ## Motivation
 I started working with computers at a very young age, and children often have interesting dreams. One of my childhood dreams was to create a technology that would allow people to interact with computers without using their eyes. This is something that I had never focused on, but during her second pregnancy, my wife was misdiagnosed with an infection that could cause our daughter to be born blind. It took one week for us to realize it was a misdiagnosis, but this experience led me to decide to revisit this idea. This repository contains the results of my efforts towards the goal of creating a low-cost tactile interface that can be used regardless of whether we have sight or not. There is a long road ahead, but I hope to leave a legacy towards this goal by sharing what I have achieved so far.
