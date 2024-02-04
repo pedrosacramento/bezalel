@@ -19,9 +19,9 @@ We've designed a 3x3 matrix that implements our novel approach. In this reposito
 The [current iteration of the mechanical model](https://www.youtube.com/shorts/GXPK05_UD4o) is controlled with GRBL 1.1h.
 
 ## Roadmap
-The ultimate aim of this project is to develop tactile matrices that can be used to convey not only braille characters, but also tactile graphics. Ideally, the spacing between the braille dots would be close to 2.5mm, the typical size used in similar technologies. However, building grids as small as 2.5mm is a very ambitious goal.
+The long term goal of this project is to develop tactile matrices to convey both braille characters and also tactile graphics for blind individuals. Ideally, the spacing between the dots would be close to 2.5mm, the typical size used on the most sophisticated existing technologies. However, building grids as small as 2.5mm is a very ambitious goal.
 
-Fortunately, there are many exciting applications for matrices with grids that are larger than 2.5mm. For example, some companies have already released braille blocks that can be used to educate blind children. We envision that our technology could be used to create digital tables where the dots are similarly big, for educational purposes, while we continue to work towards smaller grids.
+Fortunately there are many exciting applications for matrices with grids that are much larger than 2.5mm. Therefore we're focusing on building simpler devices and to leverage the opportunities they bring while we continuously work towards our major goal of building smaller grids.
 
 We are confident that advancements in 3D printing technologies will make it increasingly feasible to achieve our goal over the next decade. In the meantime, we will keep publishing grids that increase the number of dots and decrease the size of the dots, as people adapt our designs for various applications. 
 
