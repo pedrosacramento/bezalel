@@ -1,4 +1,5 @@
 # Bezalel - An open-source 3D printable low-cost tactile display
+![banner](https://github.com/pedrosacramento/bezalel/assets/4267545/e9b6caae-70ff-406a-a193-aded1cbd300d)
 
 ## Features
 * **Low-cost** - Build DIY tactile displays using a small amount of actuators
