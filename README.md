@@ -8,18 +8,18 @@ Bezalel is an open-source technology for building tactile interfaces. The strate
 * **Efficiency and low-cost** - Refresh multiple pins simultaneously using a small amount of actuators
 * **Open-source** - 3D print and improve our proof-of-concept device according to your needs
 
+## 3D printable proof-of-concept device
+We've designed a 3x3 matrix that implements our novel approach. In this repository we share the 3D printable mechanical design and the algorithm used to refresh the matrix.
+
+![Animated 3x3 model](animated-model.gif)
+
+### Firmware
+The [current iteration of the mechanical model](https://www.youtube.com/shorts/GXPK05_UD4o) is controlled with GRBL 1.1h.
+
 ## Why low-cost tactile displays?
 Tactile interaction is considered the next frontier for human-computer interaction. A generic way to promote such interaction is by using a matrix of vertical pins that can render tactile shapes. Good examples of such matrices can be seen in assistive technologies to the blind population. An interesting discussion about the relevance of such devices can be found in the description of the [European Union Tactile Display Horizon Prize](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/prizes/horizon-prizes/tactile-display_en). 
 
 Unfortunately, the manufacturing costs behind such matrices are typically very high because - among other reasons - each tactile "pixel" tends to require one actuator, and the number of actuators tends to grow quadratically with the resolution of the device. Also it is hard for traditional manufacturing processes to lower the cost of such devices on small scale. The goal of this project is to contribute to the creation of a generation of tactile displays that rely on 3D printing technologies so that they can be manufactured at home at a low cost. We provide a novel mechanical design and an algorithm with which people can create tactile devices that use a small number of actuators and that can be manufactured with 3D printed parts.
-
-![Animated 3x3 model](animated-model.gif)
-
-## Proof-of-concept 3D printable device
-We've designed a 3x3 matrix that implements our novel approach. In this repository we share the 3D printable mechanical design and the algorithm used to refresh the matrix.
-
-### Firmware
-The [current iteration of the mechanical model](https://www.youtube.com/shorts/GXPK05_UD4o) is controlled with GRBL 1.1h.
 
 ## Roadmap
 The long term goal of this project is to develop tactile matrices to convey both braille characters and also tactile graphics for blind individuals. Ideally, the spacing between the dots would be close to 2.5mm, the typical size used on the most sophisticated existing technologies. However, building grids as small as 2.5mm is a very ambitious goal.
