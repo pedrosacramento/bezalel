@@ -1,10 +1,12 @@
 # Bezalel - An open-source 3D printable low-cost tactile display
 ![banner](https://github.com/pedrosacramento/bezalel/assets/4267545/e9b6caae-70ff-406a-a193-aded1cbd300d)
 
+## What is Bezalel?
+Bezalel is an open-source technology for building tactile interfaces. The strategy relies on a novel approach where few actuators efficiently refresh an array of vertical pins.
+
 ## Features
-* **Low-cost** - Build DIY tactile displays using a small amount of actuators
-* **Efficient refresh** - Refresh multiple pins simultaneously
-* **3D printable and open-source** - 3D print and improve the technology according to your needs
+* **Efficiency and low-cost** - Refresh multiple pins simultaneously using a small amount of actuators
+* **Open-source** - 3D print and improve our proof-of-concept device according to your needs
 
 ## Why low-cost tactile displays?
 Tactile interaction is considered the next frontier for human-computer interaction. A generic way to promote such interaction is by using a matrix of vertical pins that can render tactile shapes. Good examples of such matrices can be seen in assistive technologies to the blind population. An interesting discussion about the relevance of such devices can be found in the description of the [European Union Tactile Display Horizon Prize](https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/prizes/horizon-prizes/tactile-display_en). 
@@ -13,10 +15,10 @@ Unfortunately, the manufacturing costs behind such matrices are typically very h
 
 ![Animated 3x3 model](animated-model.gif)
 
-## 3D printable device
+## Proof-of-concept 3D printable device
 We've designed a 3x3 matrix that implements our novel approach. In this repository we share the 3D printable mechanical design and the algorithm used to refresh the matrix.
 
-## Firmware
+### Firmware
 The [current iteration of the mechanical model](https://www.youtube.com/shorts/GXPK05_UD4o) is controlled with GRBL 1.1h.
 
 ## Roadmap
@@ -34,7 +36,7 @@ We are confident that advancements in 3D printing technologies will make it incr
   - programming lessons accessible to blind kids
 
 ### 2023
-- [x] Featured among top 100 Create The Future Design Contest 2023 submissions
+- [x] Featured among [top 100 Create The Future Design Contest 2023 submissions](https://contest.techbriefs.com/2023/top-100)
 
 ### 2022
 - [x] Published the proof of concept 3D printable mechanical design of a 3x3 matrix
