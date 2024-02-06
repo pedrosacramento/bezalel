@@ -46,8 +46,7 @@ The development of the prototype that I am sharing involved a lot of manual work
 
 ## Legal notice
 ### Licence
-- The mechanical designs (inside the directories create-the-future-design-contest-2023 and 3d-printable-device-2022) are free; you can redistribute it and/or modify it under the terms of the GNU General Public Licence version 3 as published by the Free Software Foundation.
-- The simulator (siggraph-asia-2019) is also free, and you can distribute it and/or modify it under the terms of the GNU Affero General Public License v3.0 as published by the Free Software Foundation.
+GNU General Public Licence version 3 as published by the Free Software Foundation
 
 ### Patent
 A patent was filed in 2019. We are following the defensive patent approach used by the RepRap project: https://reprap.org/wiki/RepRapGPLLicence
