@@ -56,7 +56,7 @@ We are confident that advancements in 3D printing technologies will make it incr
 ## Motivation
 While pregnant of our second child, my wife was misdiagnosed with an infection that could cause our daughter to be born blind.
 We then realized that it was a misdiagnosis, but the experience motivated me to revisit an old idea of trying to build tactile interfaces that would, among other things, benefit blind individuals.
-There is a long road ahead, but I want to leave a legacy towards this goal by sharing my achievements as I move towards this goal.
+There is a long road ahead, but I want to leave a legacy towards this goal by sharing my achievements as I move on.
 
 ### Fun fact
 The development of the prototype that I am sharing involved a lot of manual work and trial and error. During this process, I have constantly asked God to give me the skills necessary to achieve my goal, such as assembling, maintaining, and using a 3D printer, designing mechanical parts, etc. I honestly believe that he answered my request for help, and that is why I decided to name the project Bezalel. According to the Bible, Bezalel was a man who received craftsmanship skills from God.
