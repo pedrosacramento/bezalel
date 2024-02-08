@@ -13,9 +13,9 @@ The underlying principle that makes Bezalel very efficient is illustrated with t
 An array of rotary structures is actuated by a small amount of actuators: one actuator for each row and one for each column.
 Each actuator can change its state to 0 or 1, which means that they will either pull or push a sliding structure.
 The rotary structures promote the vertical translation of pins. Rotating clockwise or counterclockwise can cause pins to move up and down.
-The design of the mechanism allows sliding structures (red and blue in the animation) to simultaneously actuate pins that are not rotating to the same direction.
+The design of the sliding structures (red and blue in the animation) to simultaneously allow them to simultaneously actuate pins that are rotating to opposite direction if necessary.
 The strategy allow some pins to move up while other pins move down and other remain with the same resulting height because they rotate back and forth.
-Notice that the pins A2 and B1 are the only pins that perform a full rotation in the animation.
+The animation illustrates a sequence of steps in which only the pins A2 and B1 change their height.
 You can learn more about the mechanism by watching [this youtube video](https://www.youtube.com/watch?v=fyhcJz_-Ox4).
 
 ![animation](https://github.com/pedrosacramento/bezalel/assets/4267545/dae95074-8e82-44ec-aaa2-dcfd4ef71c3e)
@@ -54,7 +54,9 @@ We are confident that advancements in 3D printing technologies will make it incr
 - [x] Published the proof of concept 3D printable mechanical design of a 3x3 matrix
 
 ## Motivation
-I started working with computers at a very young age, and children often have interesting dreams. One of my childhood dreams was to create a technology that would allow people to interact with computers without using their eyes. This is something that I had never focused on, but during her second pregnancy, my wife was misdiagnosed with an infection that could cause our daughter to be born blind. It took one week for us to realize it was a misdiagnosis, but this experience led me to decide to revisit this idea. This repository contains the results of my efforts towards the goal of creating a low-cost tactile interface that can be used regardless of whether we have sight or not. There is a long road ahead, but I hope to leave a legacy towards this goal by sharing what I have achieved so far.
+While pregnant of our second child, my wife was misdiagnosed with an infection that could cause our daughter to be born blind.
+We then realized that it was a misdiagnosis, but the experience motivated me to revisit an old idea of trying to build tactile interfaces that would, among other things, benefit blind individuals.
+There is a long road ahead, but I want to leave a legacy towards this goal by sharing my achievements as I move towards this goal.
 
 ### Fun fact
 The development of the prototype that I am sharing involved a lot of manual work and trial and error. During this process, I have constantly asked God to give me the skills necessary to achieve my goal, such as assembling, maintaining, and using a 3D printer, designing mechanical parts, etc. I honestly believe that he answered my request for help, and that is why I decided to name the project Bezalel. According to the Bible, Bezalel was a man who received craftsmanship skills from God.
