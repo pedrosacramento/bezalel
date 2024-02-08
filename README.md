@@ -1,12 +1,24 @@
 # Bezalel - An open-source 3D printable low-cost tactile display
 ![banner](https://github.com/pedrosacramento/bezalel/assets/4267545/e9b6caae-70ff-406a-a193-aded1cbd300d)
 
-## What is Bezalel?
-Bezalel is an open-source technology for building tactile interfaces. The strategy relies on a novel approach where few actuators efficiently refresh an array of vertical pins.
-
 ## Features
-* **Efficiency and low-cost** - Refresh multiple pins simultaneously using a small amount of actuators
+* **Efficiency and low-cost** - Build low-cost matrices of actuated pins
 * **Open-source** - 3D print and improve our proof-of-concept device according to your needs
+
+## What is Bezalel?
+Bezalel is an open-source technology for building tactile interfaces. The strategy relies on a novel approach where few actuators efficiently actuate arrays of vertical pins.
+
+### Core innovation
+The underlying principle that makes Bezalel very efficient is illustrated with the animation below.
+An array of rotary structures is actuated by a small amount of actuators: one actuator for each row and one for each column.
+Each actuator can change its state to 0 or 1, which means that they will either pull or push a sliding structure.
+The rotary structures promote the vertical translation of pins. Rotating clockwise or counterclockwise can cause pins to move up and down.
+The design of the mechanism allows sliding structures (red and blue in the animation) to simultaneously actuate pins that are not rotating to the same direction.
+The strategy allow some pins to move up while other pins move down and other remain with the same resulting height because they rotate back and forth.
+Notice that the pins A2 and B1 are the only pins that perform a full rotation in the animation.
+You can learn more about the mechanism by watching [this youtube video](https://www.youtube.com/watch?v=fyhcJz_-Ox4).
+
+![animation](https://github.com/pedrosacramento/bezalel/assets/4267545/dae95074-8e82-44ec-aaa2-dcfd4ef71c3e)
 
 ## 3D printable proof-of-concept device
 We've designed a 3x3 matrix that implements our novel approach. In this repository we share the 3D printable mechanical design and the algorithm used to refresh the matrix.
