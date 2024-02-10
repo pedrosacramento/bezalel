@@ -20,7 +20,7 @@ You can learn more about the mechanism by watching [this youtube video](https://
 
 ![animation](https://github.com/pedrosacramento/bezalel/assets/4267545/dae95074-8e82-44ec-aaa2-dcfd4ef71c3e)
 
-## 3D printable proof-of-concept device
+## 3D printable proof of concept device
 We've designed a 3x3 matrix that implements our novel approach. In this repository we share the 3D printable mechanical design and the algorithm used to refresh the matrix.
 
 ![Animated 3x3 model](animated-model.gif)
