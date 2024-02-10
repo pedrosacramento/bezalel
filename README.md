@@ -34,24 +34,32 @@ Tactile interaction is considered the next frontier for human-computer interacti
 Unfortunately, the manufacturing costs behind such matrices are typically very high because - among other reasons - each tactile "pixel" tends to require one actuator, and the number of actuators tends to grow quadratically with the resolution of the device. Also it is hard for traditional manufacturing processes to lower the cost of such devices on small scale. The goal of this project is to contribute to the creation of a generation of tactile displays that rely on 3D printing technologies so that they can be manufactured at home at a low cost. We provide a novel mechanical design and an algorithm with which people can create tactile devices that use a small number of actuators and that can be manufactured with 3D printed parts.
 
 ## Roadmap
-The long term goal of this project is to develop tactile matrices to convey both braille characters and also tactile graphics for blind individuals. Ideally, the spacing between the dots would be close to 2.5mm, the typical size used on the most sophisticated existing technologies. However, building grids as small as 2.5mm is a very ambitious goal.
+The major goal for 2024 is to have a g-code compatible 6x6 matrix actuated by 4 stepper motors.
 
-Fortunately there are many exciting applications for matrices with grids that are much larger than 2.5mm. Therefore we're focusing on building simpler devices and to leverage the opportunities they bring while we continuously work towards our major goal of building smaller grids.
+![beta1](https://github.com/pedrosacramento/bezalel/assets/4267545/2b79980d-2b33-424f-9c72-49d7d978a55e)
 
-We are confident that advancements in 3D printing technologies will make it increasingly feasible to achieve our goal over the next decade. In the meantime, we will keep publishing grids that increase the number of dots and decrease the size of the dots, as people adapt our designs for various applications. 
-
-### 2024
+### 2024 roadmap
 - [x] Publish g-code compatible design
 - [ ] Publish 6x6 matrix
 - [ ] Publish educational material with practical usage suggestions for the technology:
   - tactile interaction with digital content (VR, AR, spatial computing, etc)
   - programming lessons accessible to blind kids
 
+## Past milestones
+
 ### 2023
 - [x] Featured among [top 100 Create The Future Design Contest 2023 submissions](https://contest.techbriefs.com/2023/top-100)
 
 ### 2022
 - [x] Published the proof of concept 3D printable mechanical design of a 3x3 matrix
+
+### Long term goals
+
+The long term goal of this project is to develop tactile matrices to convey both braille characters and also tactile graphics for blind individuals. Ideally, the spacing between the dots would be close to 2.5mm, the typical size used on the most sophisticated existing technologies. However, building grids as small as 2.5mm is a very ambitious goal.
+
+Fortunately there are many exciting applications for matrices with grids that are much larger than 2.5mm. Therefore we're focusing on building simpler devices and to leverage the opportunities they bring while we continuously work towards our major goal of building smaller grids.
+
+We are confident that advancements in 3D printing technologies will make it increasingly feasible to achieve our goal over the next decade. In the meantime, we will keep publishing grids that increase the number of dots and decrease the size of the dots, as people adapt our designs for various applications. 
 
 ## Motivation
 While pregnant of our second child, my wife was misdiagnosed with an infection that could cause our daughter to be born blind.
