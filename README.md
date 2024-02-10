@@ -41,9 +41,9 @@ Fortunately there are many exciting applications for matrices with grids that ar
 We are confident that advancements in 3D printing technologies will make it increasingly feasible to achieve our goal over the next decade. In the meantime, we will keep publishing grids that increase the number of dots and decrease the size of the dots, as people adapt our designs for various applications. 
 
 ### 2024
-- [x] Redesign the actuation mechanism so that it is compatible with G-code
-- [ ] Increase the device resolution
-- [ ] Publish tutorials with practical usage suggestions for the technology:
+- [x] Publish g-code compatible design
+- [ ] Publish 6x6 matrix
+- [ ] Publish educational material with practical usage suggestions for the technology:
   - tactile interaction with digital content (VR, AR, spatial computing, etc)
   - programming lessons accessible to blind kids
 
