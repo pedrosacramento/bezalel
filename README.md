@@ -39,13 +39,16 @@ The major goal for 2024 is to have a g-code compatible 6x6 matrix actuated by 4 
 ![beta1](https://github.com/pedrosacramento/bezalel/assets/4267545/2b79980d-2b33-424f-9c72-49d7d978a55e)
 
 ### 2024 roadmap
-- [x] Publish g-code compatible design
+- [x] Publish g-code compatible design ([Hackster.io contest entry](https://www.hackster.io/pedrosacramento/bezalel-open-source-3d-printable-tactile-display-5aa8e6))
 - [ ] Publish 6x6 matrix
 - [ ] Publish educational material with practical usage suggestions for the technology:
   - tactile interaction with digital content (VR, AR, spatial computing, etc)
   - programming lessons accessible to blind kids
 
 ## Past milestones
+
+### 2024
+- [x] Awarded Runnerup Visual Impairments - [Build2gether 2.0 — Inclusive Innovation Challenge (Hackster.io/ETH Zurich)](https://www.hackster.io/pedrosacramento/bezalel-open-source-3d-printable-tactile-display-5aa8e6)
 
 ### 2023
 - [x] Featured among [top 100 Create The Future Design Contest 2023 submissions](https://contest.techbriefs.com/2023/top-100)
