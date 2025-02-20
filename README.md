@@ -36,9 +36,6 @@ Unfortunately, the manufacturing costs behind such matrices are typically very h
 ### 2025 roadmap
 - [ ] Develop and release an inclusive tactile educational game, inspired by Bezalel principles, designed to engage both blind and sighted children.
 
-### 2024 roadmap
-- [x] Publish g-code compatible design ([Hackster.io contest entry](https://www.hackster.io/pedrosacramento/bezalel-open-source-3d-printable-tactile-display-5aa8e6))
-
 ## Past milestones
 
 ### 2024
