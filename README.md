@@ -3,7 +3,7 @@
 
 ## Features
 * **Efficiency and low-cost** - Build low-cost matrices of actuated pins
-* **Open-source** - 3D print and improve our proof-of-concept device according to your needs
+* **Open-source** - 3D print and improve our design according to your needs
 
 ## What is Bezalel?
 Bezalel is an open-source technology for building tactile interfaces. The strategy relies on a novel approach where few actuators efficiently actuate arrays of vertical pins.
