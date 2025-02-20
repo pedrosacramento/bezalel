@@ -1,6 +1,6 @@
 # Bezalel
 
-This folder contains the [mechanical model](https://www.youtube.com/shorts/VI4thVvgoXY) of the Bezael device that has been designed for being actuated using stepper motors.
+This folder contains the mechanical model of the Bezael device that has been designed for being actuated using stepper motors video ([video1](https://youtube.com/shorts/rH5o1_4vkyY), [video2](https://youtube.com/shorts/BmYJGurla8U))
 
 ## Hardware
 * 2 x Nema 17 17hs4401 4kgf.cm stepper motor
