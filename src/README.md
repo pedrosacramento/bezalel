@@ -16,4 +16,4 @@ This folder contains the mechanical model of the Bezael device that has been des
 * Grbl v1.1 (https://github.com/gnea/grbl)
 
 ## How to assemble
-A video will be updated soon
+A video will be uploaded soon. Please refer to [this Hackster.io entry](https://www.hackster.io/pedrosacramento/bezalel-open-source-3d-printable-tactile-display-5aa8e6) for more details until the new video is uploaded
