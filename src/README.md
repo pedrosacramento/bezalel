@@ -12,8 +12,8 @@ This folder contains the mechanical model of the Bezael device that has been des
 * 21 x 3.1mm shaft collar ([example](https://pt.aliexpress.com/item/1005003321096391.html))
 
 ## Softwares
-Universal G-code Sender (https://winder.github.io/ugs_website/)
-Grbl v1.1 (https://github.com/gnea/grbl)
+* Universal G-code Sender (https://winder.github.io/ugs_website/)
+* Grbl v1.1 (https://github.com/gnea/grbl)
 
 ## How to assemble
 A video will be updated soon
