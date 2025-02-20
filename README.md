@@ -33,17 +33,11 @@ Tactile interaction is considered the next frontier for human-computer interacti
 
 Unfortunately, the manufacturing costs behind such matrices are typically very high because - among other reasons - each tactile "pixel" tends to require one actuator, and the number of actuators tends to grow quadratically with the resolution of the device. Also it is hard for traditional manufacturing processes to lower the cost of such devices on small scale. The goal of this project is to contribute to the creation of a generation of tactile displays that rely on 3D printing technologies so that they can be manufactured at home at a low cost. We provide a novel mechanical design and an algorithm with which people can create tactile devices that use a small number of actuators and that can be manufactured with 3D printed parts.
 
-## Roadmap
-The major goal for 2024 is to have a g-code compatible 6x6 matrix actuated by 4 stepper motors.
-
-![beta1](https://github.com/pedrosacramento/bezalel/assets/4267545/2b79980d-2b33-424f-9c72-49d7d978a55e)
+### 2025 roadmap
+- [ ] Develop and release an inclusive tactile educational game, inspired by Bezalel principles, designed to engage both blind and sighted children.
 
 ### 2024 roadmap
 - [x] Publish g-code compatible design ([Hackster.io contest entry](https://www.hackster.io/pedrosacramento/bezalel-open-source-3d-printable-tactile-display-5aa8e6))
-- [ ] Publish 6x6 matrix
-- [ ] Publish educational material with practical usage suggestions for the technology:
-  - tactile interaction with digital content (VR, AR, spatial computing, etc)
-  - programming lessons accessible to blind kids
 
 ## Past milestones
 
