@@ -45,7 +45,7 @@ Bezalel breaks this limitation, offering a **low-cost, maker-friendly** alternat
 ## 🛠️ Roadmap
 
 ### 2025
-- [ ] Develop and release an **inclusive tactile educational game**, inspired by Bezalel, for both blind and sighted children
+- [ ] Develop and release an **inclusive tactile educational game**, inspired by Bezalel, for both blind and sighted children ([simulator](https://pedrosacramento.github.io/tictactoe/))
 
 ### Past milestones
 #### 2024
