@@ -45,15 +45,15 @@ Bezalel breaks this limitation, offering a **low-cost, maker-friendly** alternat
 ## 🛠️ Roadmap
 
 ### 2025
-- [ ] Develop and release an **inclusive tactile educational game**, inspired by Bezalel, for both blind and sighted children ([simulator](https://pedrosacramento.github.io/tictactoe/))
+- 🎮 Released an **inclusive tactile educational game**, using Bezalel technology, for both blind and sighted children (📹 [Video (in progress)](https://www.youtube.com/shorts/zZdskc9G0Oo) | 🎮 [Web Simulator](https://pedrosacramento.github.io/tictactoe/))
 
 ### Past milestones
 #### 2024
-- 🥈 Runner-up — *Visual Impairments* category, [Build2gether 2.0 (Hackster.io / ETH Zurich)](https://www.hackster.io/pedrosacramento/bezalel-open-source-3d-printable-tactile-display-5aa8e6)
+- 🥈 Runner-up — *Visual Impairments* category, [Build2gether 2.0 (Hackster.io / ETH Zurich)](https://www.hackster.io/pedrosacramento/bezalel-open-source-3d-printable-tactile-display-5aa8e6) (📹 [Video](https://www.youtube.com/shorts/BmYJGurla8U))
 #### 2023
-- 🏅 Featured among [Top 100 Create The Future Design Contest submissions](https://contest.techbriefs.com/2023/top-100)
+- 🏅 Featured among [Top 100 Create The Future Design Contest submissions](https://contest.techbriefs.com/2023/top-100) (📹 [Video](https://www.youtube.com/watch?v=p8M2p39o1eg))
 #### 2022
-- 🧱 Published the **first 3D-printable 3×3 proof of concept**
+- 🧱 Published the **first 3D-printable 3×3 proof of concept** (📹 [Video (only pins)](https://www.youtube.com/watch?v=CwHi78mkTRg))
 
 ## 🌍 Long-term vision
 We expect this technology to serve as the foundation for a new generation of 3D-printable interfaces that do not rely on vision or hearing.  
