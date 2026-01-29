@@ -45,7 +45,7 @@ Bezalel breaks this limitation, offering a **low-cost, maker-friendly** alternat
 ## 🛠️ Roadmap
 
 ### 2025
-- 🎮 Released an **inclusive tactile educational game**, using Bezalel technology, for both blind and sighted children (📹 [Video (in progress)](https://www.youtube.com/shorts/zZdskc9G0Oo) | 🎮 [Web Simulator](https://pedrosacramento.github.io/tictactoe/))
+- ⏲️ Started an **inclusive tactile educational game**, using Bezalel technology, for both blind and sighted children (📹 [Video (in progress)](https://www.youtube.com/shorts/zZdskc9G0Oo) | 🎮 [Web Simulator](https://pedrosacramento.github.io/tictactoe/))
 
 ### Past milestones
 #### 2024
