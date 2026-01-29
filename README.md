@@ -31,7 +31,7 @@ This model demonstrates how a low number of actuators can control a tactile pin 
 ![Animated 3x3 model](animated-model.gif)
 
 - Controlled via **GRBL 1.1h firmware**  
-- [Current iteration video](https://www.youtube.com/shorts/rH5o1_4vkyY)
+- [Latest iteration video](https://www.youtube.com/shorts/zZdskc9G0Oo)
 
 ## 💡 Why tactile displays matter
 Tactile interaction is a key frontier in **human-computer interaction**, particularly for **assistive technologies** for the blind and visually impaired.
