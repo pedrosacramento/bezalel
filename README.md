@@ -70,9 +70,8 @@ This project reflects a personal pursuit that bridges faith and craftsmanship. I
 ## ⚖️ Legal notice
 
 ### License
-Released under the **GNU General Public License v3 (GPLv3)**, with the following exception:
-
-- The **3D-printable parts** under `projects/*/` (OpenSCAD sources and STL files) are licensed under the **Creative Commons Attribution 4.0 International License (CC BY 4.0)**. See the `LICENSE` file inside each project directory.
+- **Code**: GNU General Public License v3 (GPLv3)
+- **STL files**: Creative Commons Attribution 4.0 International (CC BY 4.0)
 
 © Pedro Sacramento
 
