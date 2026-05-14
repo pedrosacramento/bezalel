@@ -79,7 +79,7 @@ This project reflects a personal pursuit that bridges faith and craftsmanship. I
 © Pedro Sacramento
 
 ### Patent
-Bezalel's mechanical design is covered by a pending Brazilian patent application (BR 102019021008, filed 2019, under examination). The design is currently **unrestricted and available for replication worldwide**. Patent licensing terms, if any, will be determined upon grant.
+Bezalel's mechanical design is covered by a pending Brazilian patent application (BR 102019021008, filed 2019, under examination). This patent is held defensively, following the open-protection model of the [RepRap project](https://reprap.org/wiki/RepRap). The design is currently **unrestricted and available for replication worldwide**. Patent licensing terms, if any, will be determined upon grant.
 
 ## 🤝 How to contribute
 
