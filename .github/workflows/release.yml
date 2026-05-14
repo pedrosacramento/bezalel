@@ -1,0 +1,57 @@
+name: Release
+
+on:
+  push:
+    branches: [master]
+    paths: ['**/version.json']
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Create releases
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Process all version.json files
+          find . -name "version.json" -not -path "*/.*" | sort | while read vfile; do
+            DIR=$(dirname "$vfile")
+            VERSION=$(jq -r '.version' "$vfile")
+            PROJECT=$(basename "$DIR")
+            TAG="$PROJECT/v$VERSION"
+
+            # Check if tag already exists
+            if git rev-parse "$TAG" >/dev/null 2>&1; then
+              echo "⊘ Tag $TAG already exists"
+              continue
+            fi
+
+            echo "✓ Creating release $TAG"
+
+            # Create and push tag
+            git tag "$TAG"
+            git push origin "$TAG"
+
+            # Create package
+            PACKAGE="/tmp/${PROJECT}-${VERSION}.zip"
+            (cd "$DIR" && zip -qr "$PACKAGE" .)
+
+            # Extract changelog notes if available
+            NOTES="Release $VERSION"
+            if [ -f "$DIR/CHANGELOG.md" ]; then
+              # Extract the section for this version
+              NOTES=$(awk "/## \[$VERSION\]/,/^## / {print}" "$DIR/CHANGELOG.md" | head -n -1)
+            fi
+
+            # Create GitHub Release
+            gh release create "$TAG" \
+              --title "$PROJECT v$VERSION" \
+              --notes "$NOTES" \
+              "$PACKAGE"
+          done
