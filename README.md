@@ -70,13 +70,13 @@ This project reflects a personal pursuit that bridges faith and craftsmanship. I
 ## ⚖️ Legal notice
 
 ### License
-- **Code**: GNU General Public License v3 (GPLv3)
 - **STL files**: Creative Commons Attribution 4.0 International (CC BY 4.0)
+- **Code**: Claude is almost convincing me to use Apache licensing when I push those changes.
 
 © Pedro Sacramento
 
 ### Patent
-A defensive patent was filed in 2019, following the open-protection model of the [RepRap project](https://reprap.org/wiki/RepRapGPLLicence).
+A defensive patent was filed in 2019, following the open-protection model of the [RepRap project](https://reprap.org/wiki/RepRap).
 
 ## 🤝 How to contribute
 
