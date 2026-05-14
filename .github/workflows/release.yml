@@ -25,6 +25,7 @@ jobs:
             VERSION=$(jq -r '.version' "$vfile")
             PROJECT=$(basename "$DIR")
             TAG="$PROJECT/v$VERSION"
+            LATEST_TAG="$PROJECT-latest"
 
             # Check if tag already exists
             if git rev-parse "$TAG" >/dev/null 2>&1; then
@@ -38,9 +39,11 @@ jobs:
             git tag "$TAG"
             git push origin "$TAG"
 
-            # Create package
-            PACKAGE="/tmp/${PROJECT}-${VERSION}.zip"
-            (cd "$DIR" && zip -qr "$PACKAGE" .)
+            # Create packages
+            VERSIONED_PACKAGE="/tmp/${PROJECT}-${VERSION}.zip"
+            LATEST_PACKAGE="/tmp/${PROJECT}-latest.zip"
+            (cd "$DIR" && zip -qr "$VERSIONED_PACKAGE" .)
+            cp "$VERSIONED_PACKAGE" "$LATEST_PACKAGE"
 
             # Extract changelog notes if available
             NOTES="Release $VERSION"
@@ -49,9 +52,22 @@ jobs:
               NOTES=$(awk "/## \[$VERSION\]/,/^## / {print}" "$DIR/CHANGELOG.md" | head -n -1)
             fi
 
-            # Create GitHub Release
+            # Create GitHub Release for versioned release
             gh release create "$TAG" \
               --title "$PROJECT v$VERSION" \
               --notes "$NOTES" \
-              "$PACKAGE"
+              "$VERSIONED_PACKAGE"
+
+            # Update latest release
+            if gh release view "$LATEST_TAG" >/dev/null 2>&1; then
+              echo "✓ Updating $LATEST_TAG release"
+              gh release delete "$LATEST_TAG" -y
+            fi
+
+            echo "✓ Creating $LATEST_TAG release"
+            gh release create "$LATEST_TAG" \
+              --title "$PROJECT (Latest)" \
+              --notes "Latest release: v$VERSION" \
+              --prerelease \
+              "$LATEST_PACKAGE"
           done
