@@ -44,6 +44,9 @@ Bezalel breaks this limitation, offering a **low-cost, maker-friendly** alternat
 
 ## 🛠️ Roadmap
 
+### 2026
+- ⏲️ Started exploring Bezalel for **human-AI interaction**
+
 ### 2025
 - ⏲️ Started an **inclusive tactile educational game**, using Bezalel technology, for both blind and sighted children (📹 [Video (in progress)](https://www.youtube.com/shorts/zZdskc9G0Oo) | 🎮 [Web Simulator](https://pedrosacramento.github.io/tictactoe/))
 
@@ -71,7 +74,7 @@ This project reflects a personal pursuit that bridges faith and craftsmanship. I
 
 ### License
 - **STL files**: Creative Commons Attribution 4.0 International (CC BY 4.0)
-- **Code**: Claude is almost convincing me to use Apache licensing when I push those changes.
+- **Code**: Apache 2.0
 
 © Pedro Sacramento
 
