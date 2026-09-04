@@ -79,7 +79,14 @@ This project reflects a personal pursuit that bridges faith and craftsmanship. I
 © Pedro Sacramento
 
 ### Patent
-Bezalel's mechanical design is covered by Brazilian patent BR 102019021008 (filed 2019, granted May 2026). This patent is held defensively, following the open-protection model of the [RepRap project](https://reprap.org/wiki/RepRap).
+Bezalel's mechanical design is covered by Brazilian patent BR 102019021008 (filed 2019, granted May 2026).
+
+Open-source hardware and patent rights can coexist. The STL files and code remain freely available under their respective licenses, but the patent governs how the mechanism may be used in Brazil:
+
+- **Research and personal use** — free
+- **Commercial use in Brazil** — requires a license
+
+For commercial licensing inquiries, contact Pedro Sacramento.
 
 ## 🤝 How to contribute
 
